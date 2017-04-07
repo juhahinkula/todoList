@@ -27,7 +27,7 @@
     	<tr th:each = "todo : ${todolist}">
     		<td th:text="${todo.description}"></td>
     		<td th:text="${todo.status}"></td>
-    		<td th:text="${todo.createdDate}"></td>
+    		<td th:text="${#dates.format(todo.createdDate, 'dd-MMM-yyyy hh:mm')}"></td>
     		<td th:text="${todo.createdBy}"></td>
     	</tr>
      </table>
