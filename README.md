@@ -11,6 +11,4 @@ Application has two demo users:
 user/user (role=USER) and
 admin/admin (role=ADMIN)
 
-##Screenshot##
-
 ![Screenshot](http://juhahinkula.github.com/img/jpa_auditing.png)
