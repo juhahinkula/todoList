@@ -21,14 +21,14 @@ public class TodoController {
 	
 	// Show all todos
     @RequestMapping(value="/todos")
-    public String studentList(Model model) {	
+    public String todoList(Model model) {	
         model.addAttribute("todolist", repository.findAll());
         return "todos";
     }
 
     // Add new todo
     @RequestMapping(value = "/add")
-    public String addStudent(Model model){
+    public String addTodo(Model model){
     	model.addAttribute("todo", new Todo());
         return "addtodo";
     }     
