@@ -1,5 +1,7 @@
 package fi.haagahelia.course;
 
+import java.util.Optional;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.AuditorAware;
@@ -23,10 +25,10 @@ class AuditConfig {
 
     public static class SecurityAuditor implements AuditorAware<String> {
         @Override
-        public String getCurrentAuditor() {
+        public Optional<String> getCurrentAuditor() {
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
             String username = auth.getName();
-            return username;
+            return Optional.of(username);
         }
     }	
 }
